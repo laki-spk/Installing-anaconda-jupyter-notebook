@@ -1,0 +1,8 @@
+mkdir jupiter
+cd jupiter
+module avail
+module load anaconda2/2019.10
+# log in to your node
+srun -A pcbg -p pcbg-compute --qos=pcbg -c 16 --mem=32G --pty bash 
+conda create -n jupyter_env python=3.8 anaconda
+# Collecting package metadata: done
