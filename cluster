@@ -4,5 +4,12 @@ module avail
 module load anaconda2/2019.10
 # log in to your node
 srun -A pcbg -p pcbg-compute --qos=pcbg -c 16 --mem=32G --pty bash 
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh  
+./Miniconda3-latest-Linux-x86_64.sh./Miniconda3-latest-Linux-x86_64.sh
+conda
+pip install jupyterlab
+jupyter notebook
+jupyter lab --ip=$(hostname -i) --port=8888 --no-browser --notebook-dir /temp_work/ch250798/Scenic
 conda create -n jupyter_env python=3.8 anaconda
 # Collecting package metadata: done
